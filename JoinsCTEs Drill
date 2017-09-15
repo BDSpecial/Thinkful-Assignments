@@ -1,0 +1,117 @@
+1: What are the three longest trips on rainy days? This is the best that I can do but I know that it is not correct because when
+I try to check my answers on with the dataset it is not correct. 
+
+ WITH rain_stations AS (
+	SELECT 
+		weather.Date,
+		weather.ZIP,
+		weather.PrecipitationIn
+	FROM 
+		weather
+	WHERE 
+		weather.PrecipitationIn != 0
+	GROUP BY 1
+)
+
+SELECT 
+	trips.trip_id,
+	trips.duration,
+	trips.start_date,
+	trips.zip_code
+FROM 
+	trips
+JOIN 
+	rain_stations
+ON 
+	trips.start_date = rain_stations.Date
+ORDER BY 2 DESC
+
+2: Which station is empty most often?
+
+SELECT 
+	station_id,
+COUNT(*)
+FROM 
+	status
+WHERE 
+	bikes_available = 0
+GROUP BY 1
+ORDER BY 2 DESC
+
+Would this work also?
+
+SELECT 
+	station_id,
+	(CASE WHEN bikes_available = 0 THEN 'Empty' END), 
+	COUNT(*) as times_empty
+FROM 
+	status
+GROUP BY 1
+ORDER BY 2 DESC
+
+
+3: Return a list of stations with a count of number of trips start at that station but ordered by dock count.
+
+-- This allows me to get the station information for id, name, and dockcount and order it according to it's dockcount
+select
+	station_id,
+	name,
+	dockcount
+from
+	stations
+order by 3
+
+-- This allows me to count up the number of times a trip starts at a location
+select
+	start_station,
+	COUNT(*)
+from
+	trips
+group by 1
+
+-- Why doesn't this work to allow me to join the previous two queries? 
+WITH 
+	starting
+AS (
+		select
+			start_station,
+			COUNT(*)
+		from
+			trips
+		group by 1
+)
+
+select
+	station_id,
+	name,
+	dockcount
+from
+	stations
+join
+	starting
+on 
+	stations.name = starting.start_station
+order by 3
+
+
+4: 
+
+-- These are the days where it rained. 
+SELECT 
+	weather.Date,
+	weather.ZIP,
+	weather.PrecipitationIn
+FROM 
+	weather
+WHERE 
+	weather.PrecipitationIn != 0
+GROUP BY 1
+
+--- Here is where I get the trip dates and durations. 
+SELECT 
+	trip_id,
+	start_date,
+	duration
+FROM 
+	trips
+GROUP BY
