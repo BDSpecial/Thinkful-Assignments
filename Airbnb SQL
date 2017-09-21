@@ -1,3 +1,5 @@
+1: What's the most expensive listing? What else can you tell me about the listing?
+
 UPDATE listings
 SET price= REPLACE(price,'$',' ');
 UPDATE listings
@@ -10,3 +12,30 @@ from
 	listings
 where
 	price = 10000
+	
+2: What neighborhoods seem to be the most popular?
+
+select
+	neighbourhood,
+	count(*)
+from
+	listings
+group by 1
+order by 2 desc
+
+3: What time of year is the cheapest time to go to your city? What about the busiest?
+
+UPDATE calendar
+SET price= REPLACE(price,'$',' ');
+UPDATE calendar
+SET price= REPLACE(price,',','');
+UPDATE calendar
+SET price= REPLACE(price,' ','');
+
+select
+	listing_id,
+	date,
+	price
+from
+	calendar
+order by 3
