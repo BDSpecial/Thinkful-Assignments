@@ -1,6 +1,12 @@
+UPDATE listings
+SET price= REPLACE(price,'$',' ');
+UPDATE listings
+SET price= REPLACE(price,',','');
+UPDATE listings
+SET price= REPLACE(price,' ','');
 select 
-	id
+	*
 from
 	listings
 where
-	price = max()
+	price = 10000
