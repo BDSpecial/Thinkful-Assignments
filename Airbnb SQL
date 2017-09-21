@@ -23,7 +23,7 @@ from
 group by 1
 order by 2 desc
 
-3: What time of year is the cheapest time to go to your city? What about the busiest?
+3: What time of year is the cheapest time to go to your city? 
 
 UPDATE calendar
 SET price= REPLACE(price,'$',' ');
@@ -33,9 +33,22 @@ UPDATE calendar
 SET price= REPLACE(price,' ','');
 
 select
-	listing_id,
 	date,
-	price
+	AVG(price)
 from
 	calendar
-order by 3
+group by 1
+order by 2
+
+-- What about the busiest?
+
+select
+	date,
+	available,
+	count(*)
+from
+	calendar
+where 
+	available like 'f'
+group by 1
+order by 3 desc
