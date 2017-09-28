@@ -52,10 +52,22 @@ order by 2
 select
 	date,
 	available,
-	count(*)
+	count(*) AS not_available
 from
 	calendar
 where 
-	available like 'f'
+	available = 'f'
 group by 1
 order by 3 desc
+
+
+select
+	listing_id,
+	available,
+	count(*) AS not_available
+from
+	calendar
+where 
+	available = 'f'
+group by 1
+order by 3
