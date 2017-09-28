@@ -47,7 +47,7 @@ FROM
 	listings
 GROUP BY
 	neighbourhood_cleansed
-ORDER BY popular_neighbourhoods
+ORDER BY neighbourhood_listings
 
 	
 -- Here I took the listing_id and not_available and put it into an 'empty' sub-table. I then selected the listing_id and 
