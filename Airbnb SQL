@@ -22,44 +22,6 @@ WHERE
 	
 2: What neighborhoods seem to be the most popular?
 
-select
-	neighbourhood,
-	count(*)
-from
-	listings
-group by 1
-order by 2 desc
-
-3: What time of year is the cheapest time to go to your city? 
-
-UPDATE calendar
-SET price= REPLACE(price,'$',' ');
-UPDATE calendar
-SET price= REPLACE(price,',','');
-UPDATE calendar
-SET price= REPLACE(price,' ','');
-
-select
-	date,
-	AVG(price)
-from
-	calendar
-group by 1
-order by 2
-
--- What about the busiest?
-
-select
-	date,
-	available,
-	count(*) AS not_available
-from
-	calendar
-where 
-	available = 'f'
-group by 1
-order by 3 desc
-
 -- Here I grouped by the IDs from the calendar table and counted how many times they were not available or had an 'f' under 
 available. This gave me the number of times that each ID listing for a house wasn't available. 
 
@@ -169,3 +131,35 @@ ON
 	empty.listing_id = listings.id
 GROUP BY
 	neighbourhood_cleansed
+
+
+3: What time of year is the cheapest time to go to your city? 
+
+UPDATE calendar
+SET price= REPLACE(price,'$',' ');
+UPDATE calendar
+SET price= REPLACE(price,',','');
+UPDATE calendar
+SET price= REPLACE(price,' ','');
+
+select
+	date,
+	AVG(price)
+from
+	calendar
+group by 1
+order by 2
+
+-- What about the busiest?
+
+select
+	date,
+	available,
+	count(*) AS not_available
+from
+	calendar
+where 
+	available = 'f'
+group by 1
+order by 3 desc
+
