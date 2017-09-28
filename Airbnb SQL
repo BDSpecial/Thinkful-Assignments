@@ -133,33 +133,26 @@ GROUP BY
 	neighbourhood_cleansed
 
 
-3: What time of year is the cheapest time to go to your city? 
+3: What time of year is the cheapest time to go to your city? What about the busiest?
 
-UPDATE calendar
-SET price= REPLACE(price,'$',' ');
-UPDATE calendar
-SET price= REPLACE(price,',','');
-UPDATE calendar
-SET price= REPLACE(price,' ','');
-
-select
+-- It appears that March is the cheapest time of year in Austin. 
+SELECT 
 	date,
-	AVG(price)
-from
+	AVG(CAST(SUBSTR(REPLACE(price, ',', ''),2)AS DECIMAL)) AS average_price
+FROM 
 	calendar
-group by 1
-order by 2
+GROUP BY date
+ORDER BY average_price
 
--- What about the busiest?
-
-select
+-- It appears that March is also the time of year with the highest unavailability. 
+SELECT 
 	date,
 	available,
 	count(*) AS not_available
-from
+FROM 
 	calendar
-where 
+WHERE 
 	available = 'f'
-group by 1
-order by 3 desc
+GROUP BY date
+ORDER BY not_available DESC 
 
