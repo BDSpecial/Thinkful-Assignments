@@ -140,9 +140,10 @@ ON
 	empty.listing_id = listings.id
 
 
--- Now I want to group by the neighbourhood_cleansed number so that I can count the number of listings for each neighbourhood
+-- Now I am grouping by the neighbourhood_cleansed number so that I can count the number of listings for each neighbourhood
 and also sum the number of not_available times for each neighbourhood. I also renamed the neighbourhood_cleansed to zip_code
-because that is essentially what that number is. 
+because that is essentially what that number is. My question is how do I divide the neighbourhood_listings by the sum of the 
+not_available listings for each neighbourhood? I'm confused about how SQL allows me to divide those two numbers. 
 
 WITH empty AS (
 	SELECT 
@@ -157,9 +158,9 @@ WITH empty AS (
 )
 
 SELECT 
-	SUM(not_available),
 	listings.neighbourhood_cleansed AS zip_code,
-	count(*) AS neighbourhood_listings
+	count(*) AS neighbourhood_listings,
+	SUM(not_available)
 FROM 
 	empty
 JOIN 
