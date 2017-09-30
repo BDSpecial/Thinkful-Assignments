@@ -22,107 +22,18 @@ WHERE
 	
 2: What neighborhoods seem to be the most popular?
 
--- Here I grouped by the IDs from the calendar table and counted how many times they were not available or had an 'f' under 
-available. This gave me the number of times that each ID listing for a house wasn't available. 
-
-SELECT 
-	listing_id,
-	available,
-	count(*) AS not_available
-FROM 
-	calendar
-WHERE 
-	available = 'f'
-GROUP BY listing_id
-ORDER BY not_available
-
--- Here I selected the number for each neighbourhood, called the neighbourhood_cleansed. I then grouped by these neighbourhoods
-and counted how many listings there were for each neighbourhood. I called it neighbourhood_listings because it tells me the 
-number of listings for each neighbourhood. 
-
-SELECT 
-	neighbourhood_cleansed,
-	count(*) AS neighbourhood_listings
-FROM 
-	listings
-GROUP BY
-	neighbourhood_cleansed
-ORDER BY neighbourhood_listings
-
-	
--- Here I took the listing_id and not_available and put it into an 'empty' sub-table. I then selected the listing_id and 
-not_available and I joined it to the ID column from the listings table.
-
 WITH empty AS (
 	SELECT 
 		listing_id,
-		available,
-		count(*) AS not_available
+		count(CASE WHEN available = 'f' THEN 1 END)*1.0 / count(available) AS rate_available
 	FROM 
 		calendar
-	WHERE 
-		available = 'f'
 	GROUP BY listing_id
 )
 
 SELECT 
-	listing_id,
-	not_available
-FROM 
-	empty
-JOIN 
-	listings
-ON
-	empty.listing_id = listings.id
-	
-	
--- Now for each ID I wanted to select its corresponding 'neighbourhood_cleansed' number. 
-
-WITH empty AS (
-	SELECT 
-		listing_id,
-		available,
-		count(*) AS not_available
-	FROM 
-		calendar
-	WHERE 
-		available = 'f'
-	GROUP BY listing_id
-)
-
-SELECT 
-	listing_id,
-	not_available,
-	listings.neighbourhood_cleansed
-FROM 
-	empty
-JOIN 
-	listings
-ON
-	empty.listing_id = listings.id
-
-
--- Now I am grouping by the neighbourhood_cleansed number so that I can count the number of listings for each neighbourhood
-and also sum the number of not_available times for each neighbourhood. I also renamed the neighbourhood_cleansed to zip_code
-because that is essentially what that number is. My question is how do I divide the neighbourhood_listings by the sum of the 
-not_available listings for each neighbourhood? I'm confused about how SQL allows me to divide those two numbers. 
-
-WITH empty AS (
-	SELECT 
-		listing_id,
-		available,
-		count(*) AS not_available
-	FROM 
-		calendar
-	WHERE 
-		available = 'f'
-	GROUP BY listing_id
-)
-
-SELECT 
-	listings.neighbourhood_cleansed AS zip_code,
-	count(*) AS neighbourhood_listings,
-	SUM(not_available)
+	AVG(rate_available) AS rate_available,
+	listings.neighbourhood_cleansed AS zip_code
 FROM 
 	empty
 JOIN 
@@ -131,6 +42,7 @@ ON
 	empty.listing_id = listings.id
 GROUP BY
 	neighbourhood_cleansed
+ORDER BY rate_available DESC
 
 
 3: What time of year is the cheapest time to go to your city? What about the busiest?
