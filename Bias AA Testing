@@ -1,0 +1,18 @@
+For each of the following scenarios, call out the potential biases in the proposed experiment. Do your best to try to discover
+not only the bias, but the initial design.
+
+1: You're testing advertising emails for a bathing suit company and you test one version of the email in February and the        other in May.
+  - The obvious bias that I see right away in this example is sending the two emails out three months apart. There are
+    differences in the weather and day light hours between February and May that could easily impact the response rate to 
+    advertisments. This is a contextual bias. 
+2: You open a clinic to treat anxiety and find that the people who visit show a higher rate of anxiety than the general          population.
+  - This is a sampling bias because naturally a clinic centered around a specific problem will select out the people in the 
+    population who share this condition. For example a cancer clinic will likely only be visited by individuals with cancer,
+    not the cancer free people who are found in the generalized population. 
+3: You launch a new ad billboard based campaign and see an increase in website visits in the first week.
+  - Without more details about the new billboard, I would say that this could be a contextual bias because maybe there are 
+    other location or time of year factors that are actually impacting the number of website visits. 
+4: You launch a loyalty program but see no change in visits in the first week.
+  - So far, the bias that I see in this study is the assignment to the condition procedure. Is a loyalty program suppose to 
+    change the number of visits or impact the retention rate? What is the key metric with which I am comparing the loyalty 
+    program with the changes in visits? 
