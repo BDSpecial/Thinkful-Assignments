@@ -1,2 +1,27 @@
 For one of those experiments, write up the essential points of an RFC for an improved version of that experiment.
 
+The Sith Lords are concerned that their recruiting slogan, "Give In to Your Anger," isn't very effective. Darth Vader develops 
+an alternative slogan, "Together We Can Rule the Galaxy." They compare the slogans on two groups of 50 captured droids each. 
+In one group, Emperor Palpatine delivers the "Anger" slogan. In the other, Dark Vader presents the "Together" slogan. 20 droids
+convert to the Dark Side after hearing Palpatine's slogan, while only 5 droids convert after hearing Vader's. The Sith's data 
+scientist concludes that "Anger" is a more effective slogan and should continue to be used.
+
+The Problem: How to recruit more droids into the Sith Lord army? Low recruitment is a problem for the Sith Lords' military 
+strategy. When the army numbers get low, they Sith Lords are limited in what options are available while taking over the 
+galaxy. When testing two slogans on two groups of 50 captured droids, the Emperor Palpatine delivery of "Give In to Your 
+Anger," slogan lead to 20 droids converting to the Dark Side while Dark Vader's presention of "Together We Can Rule the 
+Galaxy," only converted 5 droids.
+
+The Potential Solution: A motivational 'Together' slogan will improve droin recruitment by 10%. 
+
+The Method of testing the solution: Randomly collect 100 droids throughout the galaxy every month for the next six months. The 
+variable of interest is droid conversion to the Dark Side using the 'Anger' or 'Together' slogans. Currently Emperor Palpatine 
+recruited 40% of his sample's droids using the 'Anger' slogan. If I am limited to using Palpatine and Vader as presenters of 
+the slogans than I will have sample A be a 3 month period where both Palpatine and Vader use the 'Anger' recruitment on 50 
+droids and the B version when they both use the 'Together' technique on a sample of 50 droids each. 
+
+The Sith Lord data scientist will compute the six month mean and median conversion rates to the Dark Side before the study 
+and compare it to recruitment rates in the 'Anger' and 'Together' three month time periods. If the conversion rate from the 
+'Together' slogans is 10% higher than the original 'Anger' technique than the entire empire will change to this formula. If the
+change in conversion is less than one standard deviation with 'Together', than observe the study for another 2 months. If the
+recruitment does not increase in the next two months then discontinue the 'Together' slogan. 
