@@ -20,8 +20,10 @@ recruited 40% of his sample's droids using the 'Anger' slogan. If I am limited t
 the slogans than I will have sample A be a 3 month period where both Palpatine and Vader use the 'Anger' recruitment on 50 
 droids and the B version when they both use the 'Together' technique on a sample of 50 droids each. 
 
-The Sith Lord data scientist will compute the six month mean and median conversion rates to the Dark Side before the study 
-and compare it to recruitment rates in the 'Anger' and 'Together' three month time periods. If the conversion rate from the 
-'Together' slogans is 10% higher than the original 'Anger' technique than the entire empire will change to this formula. If the
-change in conversion is less than one standard deviation with 'Together', than observe the study for another 2 months. If the
-recruitment does not increase in the next two months then discontinue the 'Together' slogan. 
+The Sith Lord data scientist will compute the t-value by subtracting the 3 month means of Dark side conversion for both the 
+'Anger' and 'Together' samples from each other and then dividing this by the square root of the sum of both groups' standard 
+diviations squared plus their sample sizes. With this t-value, I will also be also to see if the p-value is low enough to 
+reject the null hypothesis. If the t-value is large and the p-value is less than 0.05 than I can confidently conclude that the
+'Together' slogan is more effective in droid recruitment. If the change in conversion is less than one standard deviation with
+'Together', than observe the study for another 2 months. If the recruitment does not increase in the next two months then 
+discontinue the 'Together' slogan. 
