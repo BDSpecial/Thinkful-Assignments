@@ -1,0 +1,16 @@
+Categorize each of the variables in the ESS dataset as categorical or continuous, and if continuous as ordinal, interval, or 
+ratio variables. Check your work with your mentor, and discuss what that information might imply for feature engineering with 
+this data.
+
+cntry: It is a categorical variable.
+year: It is a continuous variables and a ratio variable.
+tvtot: It is a continuous variable and a ratio variable.
+ppltrst: It is a continous variable and an interval variable.
+pplfair: It is a continous variable and an interval variable.
+pplhlp: It is a continous variable and an interval variable.
+happy: It is a continous variable and an ordinal variable.
+sclmeet: It is a continous variable and an interval variable.
+sclact: It is a continous variable and an ordinal variable.
+gndr: It is a categorical variable.
+agea: It is a continous variable and a ratio variable.
+partner: It is a categorical variable. 
