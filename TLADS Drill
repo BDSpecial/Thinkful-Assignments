@@ -3,7 +3,7 @@ ratio variables. Check your work with your mentor, and discuss what that informa
 this data.
 
 cntry: It is a categorical variable.
-year: It is a continuous variables and a ratio variable.
+year: It is a continuous variables and a interval variable.
 tvtot: It is a continuous variable and a ratio variable.
 ppltrst: It is a continous variable and an interval variable.
 pplfair: It is a continous variable and an interval variable.
