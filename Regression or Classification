@@ -1,0 +1,19 @@
+For each of the following situations, decide if you would model using a regression or classification model. 
+
+1. The amount a person will spend on a given site in the next 24 months.
+  - Regression model: because it is a continuous variable outcome that is looking for relationship between variables
+2. What color car someone is going to buy.
+  - Classification model: because car colors are categorical and I want to predict each color or the probability of each color.
+3. How many children a family will have.
+  - Regression model: because the number of children can be used as a continuous variable and I would like to predict the 
+    likelihood of a family having each successive child. 
+4. If someone will sign up for a service.
+  - Classification model: because signing up is a simple yes or no category and I want to model which variables change my 
+    outcome.
+5. The number of times someone will get sick in a year.
+  - Regression model: because rather than classifying each time sick as a separate discrete event I would be finding my outcome
+    and its place on the continuous line. 
+6. The probability someone will get sick in the next month.
+  - classification model
+7. Which medicine will work best for a given patient.
+  - regression model
