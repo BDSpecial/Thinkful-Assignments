@@ -14,6 +14,8 @@ For each of the following situations, decide if you would model using a regressi
   - Regression model: because rather than classifying each time sick as a separate discrete event I would be finding my outcome
     and its place on the continuous line. 
 6. The probability someone will get sick in the next month.
-  - classification model
+  - Classification model: because I am classifying the sick event as a yes or no categorical event that I want to find the 
+    probability of it happening. 
 7. Which medicine will work best for a given patient.
-  - regression model
+  - Regression model: because I think that medicine and drugs are more than a yes or no categorical outcome. So I am thinking
+    of approaching this by predicting the probability that each drug will help improve a patient's condition. 
