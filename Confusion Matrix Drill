@@ -1,0 +1,14 @@
+# False target == 'ham' or 4825
+# True target == 'spam' or 747
+# Total correct predictions == 4968
+# Total incorrect predictions == 604
+# Build your confusion matrix and calculate sensitivity and specificity here.
+correct = (y_pred==target).sum()
+incorrect = (y_pred!=target).sum()
+totalHam = (target==False).sum()
+totalSpam = (target==True).sum()
+
+print((y_pred==True!=(target)).sum())
+for i in target:
+    if y_pred!=target:
+        print((y_pred==True).sum())
