@@ -3,3 +3,8 @@ have everyone's purchases, split into four main categories: groceries, dining ou
 ways you might use KNN to create this model? What aspects of KNN would be useful? Write up your thoughts in submit a link 
 below.
 
+In this example each of the categories are measured in the same units, dollars or some other currancy. This addresses the first
+possible issue of unequivalence between measured units. However, this scenario would benefit from a K-Nearest Neighbors by 
+seeing how the groceries, dining out, and entertainment predicted the payment of utilities. We can run different models with 
+different combinations of these features to see how well they can predict the outcome correctly. A beneficial part of KNN would 
+be the ability to weigh the observations used in K by the distance or how densely the dataset is populated.  
