@@ -6,10 +6,18 @@ discuss your answers with your mentor.
 1. Predict the running times of prospective Olympic sprinters using data from the last 20 Olympics.
   - I believe that a linear regression model would work 
 2. You have more features (columns) than rows in your dataset.
+  - Lasso
 3. Identify the most important characteristic predicting likelihood of being jailed before age 20.
+  - logistic regression, decision tree but not a random forest
 4. Implement a filter to “highlight” emails that might be important to the recipient
+  - random forest, naive baise, SVM
 5. You have 1000+ features.
+  - Ridge or Lasso
 6. Predict whether someone who adds items to their cart on a website will purchase the items.
+  - random forest, naive baise, SVM
 7. Your dataset dimensions are 982400 x 500
+  - Ridge and Lasso
 8. Identify faces in an image.
+  - SVM, Lasso
 9. Predict which of three flavors of ice cream will be most popular with boys vs girls.
+  - naive baise
