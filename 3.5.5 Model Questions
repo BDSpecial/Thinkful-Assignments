@@ -4,11 +4,20 @@ identify which supervised learning method(s) would be best for addressing that p
 discuss your answers with your mentor.
 
 1. Predict the running times of prospective Olympic sprinters using data from the last 20 Olympics.
-  - I believe that a linear regression model would work 
+  - I believe that a linear regression model would work well for predicting the running times. A multivariable linear 
+    regression is well suited to taking multiple variables and seeing how they impact our outcome of intest, running times. A 
+    model could quickly create a model where: running time = alpha + age + height + weight + years_running + fastest_time + 
+    ethnicity + nationality + etc. I think that this would be a quick and reliable model that could also produce several 
+    interesting insights into the what characteristics have the greatest impact on the running time. 
 2. You have more features (columns) than rows in your dataset.
-  - Lasso
+  - If I am working with a dataset where I have more features than rows, I would likely try to reduce the model to the 
+    features that are most important to the desired outcome. A Lasso model would work very well in my opinion because it can 
+    elimiate uninformative variables by setting their coefficents to zero. This ability to eliminate some of the features will 
+    likely strengthen my model's speed and predictive ability. 
 3. Identify the most important characteristic predicting likelihood of being jailed before age 20.
-  - logistic regression, decision tree but not a random forest
+  - In this sceniero I am needing a model that tells me which characteristics are most important for the likelihood of being 
+    jailed before age 20
+    logistic regression, decision tree but not a random forest
 4. Implement a filter to “highlight” emails that might be important to the recipient
   - random forest, naive baise, SVM
 5. You have 1000+ features.
