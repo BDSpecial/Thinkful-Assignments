@@ -16,10 +16,21 @@ discuss your answers with your mentor.
     likely strengthen my model's speed and predictive ability. 
 3. Identify the most important characteristic predicting likelihood of being jailed before age 20.
   - In this sceniero I am needing a model that tells me which characteristics are most important for the likelihood of being 
-    jailed before age 20
-    logistic regression, decision tree but not a random forest
+    jailed before age 20. This means that I need a model that is not a black box but rather informative about which features
+    have the most impact on the outcome of interest. However, I am also needing a model that is predicting the probability of 
+    a categorical outcome, being jailed or not. Since the outcome is categorical, a linear regression would not be well suited.
+    A model that I would thereby choose is a logistic regression. A logistic regression follows the same assumptions as a 
+    linear regression but uses regression as a classifier to predict the probability of a categorical outcome. 
+    Another possible model would be a decision tree. A single decision tree could do well at dividing the dataset on the
+    features that best explain the outcome of interest. I would not want to use a random forest because it is a black box and
+    cannot tell me which characteristics are most important. I don't think that a decision tree is as helpful in this case a
+    the logistic regression model but it is another option for finding what features separate those who were jailed and not
+    jailed before age 20.
 4. Implement a filter to “highlight” emails that might be important to the recipient
-  - random forest, naive baise, SVM
+  - To find out if an email might be important and should be "highlighted" a good model to start off with could be naive bayes.
+    Naive bayes can tell us very easily the probability that an email is or is not important given very few features and would
+    be a good model to begin with to see what level of accuracy that can be initially acheived. 
+    random forest, naive baise, SVM
 5. You have 1000+ features.
   - Ridge or Lasso
 6. Predict whether someone who adds items to their cart on a website will purchase the items.
