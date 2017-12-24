@@ -5,17 +5,17 @@ discuss your answers with your mentor.
 
 1. Predict the running times of prospective Olympic sprinters using data from the last 20 Olympics.
   - I believe that a linear regression model would work well for predicting the running times. A multivariable linear 
-    regression is well suited to taking multiple variables and seeing how they impact our outcome of intest, running times. A 
+    regression is well suited to taking multiple variables and seeing how they impact our outcome of interest, running times. A 
     model could quickly create a model where: running time = alpha + age + height + weight + years_running + fastest_time + 
     ethnicity + nationality + etc. I think that this would be a quick and reliable model that could also produce several 
     interesting insights into the what characteristics have the greatest impact on the running time. 
 2. You have more features (columns) than rows in your dataset.
   - If I am working with a dataset where I have more features than rows, I would likely try to reduce the model to the 
     features that are most important to the desired outcome. A Lasso model would work very well in my opinion because it can 
-    elimiate uninformative variables by setting their coefficents to zero. This ability to eliminate some of the features will 
+    eliminate uninformative variables by setting their coefficients to zero. This ability to eliminate some of the features will 
     likely strengthen my model's speed and predictive ability. 
 3. Identify the most important characteristic predicting likelihood of being jailed before age 20.
-  - In this sceniero I am needing a model that tells me which characteristics are most important for the likelihood of being 
+  - In this scenario I am needing a model that tells me which characteristics are most important for the likelihood of being 
     jailed before age 20. This means that I need a model that is not a black box but rather informative about which features
     have the most impact on the outcome of interest. However, I am also needing a model that is predicting the probability of 
     a categorical outcome, being jailed or not. Since the outcome is categorical, a linear regression would not be well suited.
@@ -29,8 +29,8 @@ discuss your answers with your mentor.
 4. Implement a filter to “highlight” emails that might be important to the recipient
   - To find out if an email might be important and should be "highlighted" a good model to start off with could be naive bayes.
     Naive bayes can tell us very easily the probability that an email is or is not important given very few features and would
-    be a good model to begin with to see what level of accuracy that can be initially acheived. 
-    Another good model would be a random forest. Since this sceniero isn't wanting to find out any specific characteristics but 
+    be a good model to begin with to see what level of accuracy that can be initially achieved. 
+    Another good model would be a random forest. Since this scenario isn't wanting to find out any specific characteristics but 
     rather decide whether an email is important or not, a random forest is very strong performer because it can generate many
     trees that are different and compare all of their predicted results.
     Lastly, a Support Vector Machines (SVM) model might do well because it can try to find the hyperplane that divides 
@@ -38,11 +38,11 @@ discuss your answers with your mentor.
     at separating groups but not explaining what features make up these differences. 
 5. You have 1000+ features.
   - With a dataset so large, I would run the risk of many correlated features and overfitting. A ridge regression would be a 
-    viable option because it applies a penalty to large cooefficents. The ridge model helpd avoid incorporating too much 
+    viable option because it applies a penalty to large coefficients. The ridge model helped avoid incorporating too much 
     variance from the dataset.
     A Lasso model would also be a very good option because it reduces the model to the features that are most important to the 
-    desired outcome. A Lasso model would work very well in my opinion because it can elimiate uninformative variables by 
-    setting their coefficents to zero. This ability to eliminate some of the features will likely strengthen my model's speed 
+    desired outcome. A Lasso model would work very well in my opinion because it can eliminate uninformative variables by 
+    setting their coefficients to zero. This ability to eliminate some of the features will likely strengthen my model's speed 
     and predictive ability. 
 6. Predict whether someone who adds items to their cart on a website will purchase the items.
   - Here a logistic regression would work well to predict the probability of the categorical outcome of purchasing or not 
@@ -54,18 +54,19 @@ discuss your answers with your mentor.
     items by generating many decision trees and comparing all of their predicted results.
 7. Your dataset dimensions are 982400 x 500
   - With another dataset so large, I would run the risk of many correlated features and overfitting. A ridge regression would 
-    be a viable option because it applies a penalty to large cooefficents. The ridge model helpd avoid incorporating too much 
+    be a viable option because it applies a penalty to large coefficients. The ridge model helped avoid incorporating too much 
     variance from the dataset.
     A Lasso model would also be a very good option because it reduces the model to the features that are most important to the 
-    desired outcome. A Lasso model would work very well in my opinion because it can elimiate uninformative variables by 
-    setting their coefficents to zero. This ability to eliminate some of the features will likely strengthen my model's speed 
+    desired outcome. A Lasso model would work very well in my opinion because it can eliminate uninformative variables by 
+    setting their coefficients to zero. This ability to eliminate some of the features will likely strengthen my model's speed 
     and predictive ability.
 8. Identify faces in an image.
   - A Lasso might do well at identifying faces in an image by narrowing down which features are most important to distinguishing
     faces from other features of an image. For instance, maybe eyes and lips are more important than cheeks to determining 
     whether it is a face or not. 
-    SVM, 
+    Additionally, a SVM model might do well because it can try to find the hyperplane that divides faces in the image from other 
+    features. 
 9. Predict which of three flavors of ice cream will be most popular with boys vs girls.
-  - To create a model for this example, we have very little information to start off with. Therefore, my priciple model would 
-    be naive baise because it could easily tell us the probabilities of a boy or girl choosing each of the three ice cream 
+  - To create a model for this example, we have very little information to start off with. Therefore, my principle model would 
+    be naive bayse because it could easily tell us the probabilities of a boy or girl choosing each of the three ice cream 
     flavors based on the given number of boys and girls who have already selected a given flavor. 
