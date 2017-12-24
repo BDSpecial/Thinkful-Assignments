@@ -45,7 +45,13 @@ discuss your answers with your mentor.
     setting their coefficents to zero. This ability to eliminate some of the features will likely strengthen my model's speed 
     and predictive ability. 
 6. Predict whether someone who adds items to their cart on a website will purchase the items.
-  - random forest, naive baise, SVM, logistic regression
+  - Here a logistic regression would work well to predict the probability of the categorical outcome of purchasing or not 
+    purchasing the items in their cart.  
+    A naive bayes model could also do well at predicting the probability that someone would purchase items given that there are
+    items in their website cart. This would be a rather simple model but it could well at giving a baseline probability of 
+    users purchasing their cart items.
+    Additionally, a random forest would do well at predicting the probability of whether or not someone will purchase their
+    items by generating many decision trees and comparing all of their predicted results.
 7. Your dataset dimensions are 982400 x 500
   - With another dataset so large, I would run the risk of many correlated features and overfitting. A ridge regression would 
     be a viable option because it applies a penalty to large cooefficents. The ridge model helpd avoid incorporating too much 
@@ -55,7 +61,10 @@ discuss your answers with your mentor.
     setting their coefficents to zero. This ability to eliminate some of the features will likely strengthen my model's speed 
     and predictive ability.
 8. Identify faces in an image.
-  - SVM, Lasso
+  - A Lasso might do well at identifying faces in an image by narrowing down which features are most important to distinguishing
+    faces from other features of an image. For instance, maybe eyes and lips are more important than cheeks to determining 
+    whether it is a face or not. 
+    SVM, 
 9. Predict which of three flavors of ice cream will be most popular with boys vs girls.
   - To create a model for this example, we have very little information to start off with. Therefore, my priciple model would 
     be naive baise because it could easily tell us the probabilities of a boy or girl choosing each of the three ice cream 
