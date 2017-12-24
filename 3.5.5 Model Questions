@@ -30,8 +30,12 @@ discuss your answers with your mentor.
   - To find out if an email might be important and should be "highlighted" a good model to start off with could be naive bayes.
     Naive bayes can tell us very easily the probability that an email is or is not important given very few features and would
     be a good model to begin with to see what level of accuracy that can be initially acheived. 
-    Another good model would be a random forest because it 
-    random forest, naive baise, SVM
+    Another good model would be a random forest. Since this sceniero isn't wanting to find out any specific characteristics but 
+    rather decide whether an email is important or not, a random forest is very strong performer because it can generate many
+    trees that are different and compare all of their predicted results.
+    Lastly, a Support Vector Machines (SVM) model might do well because it can try to find the hyperplane that divides 
+    previously identified 'important' and 'non-important' emails. However, the SVM is another 'black box' that can be good
+    at separating groups but not explaining what features make up these differences. 
 5. You have 1000+ features.
   - Ridge or Lasso
 6. Predict whether someone who adds items to their cart on a website will purchase the items.
