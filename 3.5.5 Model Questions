@@ -30,14 +30,17 @@ discuss your answers with your mentor.
   - To find out if an email might be important and should be "highlighted" a good model to start off with could be naive bayes.
     Naive bayes can tell us very easily the probability that an email is or is not important given very few features and would
     be a good model to begin with to see what level of accuracy that can be initially acheived. 
+    Another good model would be a random forest because it 
     random forest, naive baise, SVM
 5. You have 1000+ features.
   - Ridge or Lasso
 6. Predict whether someone who adds items to their cart on a website will purchase the items.
-  - random forest, naive baise, SVM
+  - random forest, naive baise, SVM, logistic regression
 7. Your dataset dimensions are 982400 x 500
   - Ridge and Lasso
 8. Identify faces in an image.
   - SVM, Lasso
 9. Predict which of three flavors of ice cream will be most popular with boys vs girls.
-  - naive baise
+  - To create a model for this example, we have very little information to start off with. Therefore, my priciple model would 
+    be naive baise because it could easily tell us the probabilities of a boy or girl choosing each of the three ice cream 
+    flavors based on the given number of boys and girls who have already selected a given flavor. 
