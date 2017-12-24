@@ -37,7 +37,13 @@ discuss your answers with your mentor.
     previously identified 'important' and 'non-important' emails. However, the SVM is another 'black box' that can be good
     at separating groups but not explaining what features make up these differences. 
 5. You have 1000+ features.
-  - Ridge or Lasso
+  - With a dataset so large, I would run the risk of many correlated features and overfitting. A ridge regression would be a 
+    viable option because it applies a penalty to large cooefficents. The ridge model helpd avoid incorporating too much 
+    variance from the dataset.
+    A Lasso model would also be a very good option because it reduces the model to the features that are most important to the 
+    desired outcome. A Lasso model would work very well in my opinion because it can elimiate uninformative variables by 
+    setting their coefficents to zero. This ability to eliminate some of the features will likely strengthen my model's speed 
+    and predictive ability. 
 6. Predict whether someone who adds items to their cart on a website will purchase the items.
   - random forest, naive baise, SVM, logistic regression
 7. Your dataset dimensions are 982400 x 500
