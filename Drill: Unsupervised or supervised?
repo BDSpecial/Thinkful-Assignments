@@ -1,0 +1,14 @@
+For each of these scenarios decide if you could use supervised or unsupervised techniques, or both!
+
+1. Define the likelihood that an individual will contract a specific disease.
+  - Supervised, because I have an outcome variable that I'm interested in predicting. 
+2. Translate a set of images into variables for modeling
+  - Unsupervised, because I don't have a problem or outcome that I want to predict but rather a dataset I want to make into 
+  independent variables so that I can do something with it or say something about it. 
+3. An ecommerce company wants to identify power users
+  - Supervised, because I have an outcome variable that I'm interested in predicting.
+4. That same company wants to see shopping patterns in users
+  - Unsupervised, because I don't have a problem or outcome that I want to predict but rather a dataset I want to make into 
+  independent variables so that I can do something with it or say something about it.
+5. You want to reduce the number of variables inputting into your random forest model
+  - 
