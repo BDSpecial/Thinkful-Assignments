@@ -17,7 +17,7 @@
     - {Brian, Fiancee}
     - {Brian, Dave}
     - {Brian, You}
-3. Calculate the clustering coefficient for each node: 
+3. ????Calculate the clustering coefficient for each node: 
     - You: 8/20 Mom: NA (only links to one node) Aunt Alice: 1 Fiancee: 8/12 Dave: 1 Brian: 1 
 4. Calculate the shortest paths between each pair of nodes: 
     - You,Fiancee: 1 
@@ -35,7 +35,7 @@
     - Mom, Dave: 2 (Mom, You, Dave) 
     - Mom, Brian: 2 (Mom, You, Brian) 
     - Dave, Brian: 1 
-5. Calculate the betweenness centrality of each node: You: 6/12 Fiancee: 2/12 Mom: 0/12 Aunt Alice: 0/10 Dave: 0/11 Brian: 0/11 
+5. ???? Calculate the betweenness centrality of each node: You: 6/12 Fiancee: 2/12 Mom: 0/12 Aunt Alice: 0/10 Dave: 0/11 Brian: 0/11 
 6. Find a walk of length 5 linking Fiancee to You:
     - {Fiancee, Dave, Brian, Dave, You} or 
     - {Fiancee, You, Aunt Alice, Fiancee, You} 
