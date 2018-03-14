@@ -1,5 +1,22 @@
-1. Calculate the degree of each node Mom: 1 You: 4 Aunt Alice: 2 Fiancee: 4 Dave: 3 Brian: 3 
-2. Write a list of edges {Mom, You} {You, Aunt Alice} {You, Fiancee} {You, Dave} {You, Brian} {Fiancee, Dave {Fiancee, Brian} {Dave, Brian} 
+1. Calculate the degree of each node:
+    - Mom: 1 You: 5 Aunt Alice: 2 Fiancee: 4 Dave: 3 Brian: 3 
+2. Write a list of edges 
+    - {Mom, You} 
+    - {You, Mom} 
+    - {You, Aunt Alice} 
+    - {You, Fiancee} 
+    - {You, Dave} 
+    - {You, Brian} 
+    - {Fiancee, Aunt Alice}
+    - {Fiancee, You}
+    - {Fiancee, Dave} 
+    - {Fiancee, Brian}
+    - {Dave, Fiancee}
+    - {Dave, Brian}
+    - {Dave, You}
+    - {Brian, Fiancee}
+    - {Brian, Dave}
+    - {Brian, You}
 3. Calculate the clustering coefficient for each node: 
     - You: 8/20 Mom: NA (only links to one node) Aunt Alice: 1 Fiancee: 8/12 Dave: 1 Brian: 1 
 4. Calculate the shortest paths between each pair of nodes: 
