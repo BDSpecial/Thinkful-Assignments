@@ -1,0 +1,29 @@
+2.a Create a query that returns the name of the most popular item in every state and the state.
+
+WITH 
+	transation_details
+AS (
+	SELECT
+		customers.customer_id,
+		customers.state,
+		transactions.customer_id,
+		transactions.product_id
+	FROM 
+		customers
+	JOIN
+		transactions
+	ON
+		customers.customer_id = transactions.customer_id
+)
+SELECT
+	t.state,
+	products.product_name,
+	COUNT(*) product_counts
+FROM 
+	transation_details t
+JOIN 
+	products
+ON
+	t.product_id = products.product_id
+GROUP by t.state
+
